@@ -1,0 +1,145 @@
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1c1d21f0; /* Dark background for the body */
+}
+
+.container {
+  background: #000000; /* Black background for the container */
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(248, 231, 231, 0.1); /* Subtle shadow */
+  border-radius: 8px;
+  text-align: center; /* Center text */
+}
+
+.title {
+  font-size: 24px;
+  color: #ffffff; /* White text for the title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.input_holder {
+  display: flex; /* Flex container for input and button */
+  gap: 10px; /* Space between input and button */
+  margin-bottom: 20px; /* Space below the input holder */
+}
+
+input[type="text"] {
+  flex: 1; /* Input takes remaining space */
+  padding: 10px; /* Padding inside the input */
+  font-size: 16px; /* Font size for the input */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  outline: none; /* Remove outline */
+  transition: border 0.3s; /* Smooth border transition */
+}
+
+input[type="text"]:focus {
+  border-color: #00b7ff; /* Highlight border on focus */
+}
+
+button {
+  padding: 10px 16px; /* Padding inside the button */
+  background-color: #007bff; /* Primary color */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size for the button */
+  transition: background-color 0.3s; /* Smooth background change */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.list {
+  margin-top: 20px; /* Space above the list */
+}
+
+.toDo {
+  display: flex; /* Flex container for todo item */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between todo text and icons */
+  background: #f9f9f9; /* Light background for todo */
+  padding: 10px 15px; /* Padding inside todo */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 10px; /* Space between todos */
+}
+
+.toDo:hover {
+  background-color: #d2d0d0; /* Change background on hover */
+}
+
+.icons {
+  display: flex; /* Flex container for icons */
+  gap: 6px; /* Space between icons */
+}
+
+.icon {
+  color: #888; /* Gray color for icons */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 18px; /* Size of the icons */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.icon:hover {
+  color: #007bff; /* Change icon color on hover */
+}
+
+/* Popup Styles */
+
+.backdrop {
+  position: fixed; /* Overlay the entire screen */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  bottom: 0; /* Align to bottom */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex; /* Center the popup */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1000; /* Ensure it overlays other content */
+}
+
+.popup {
+  background-color: rgb(156, 156, 156); /* White background for the popup */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Space inside the popup */
+  width: 300px; /* Fixed width for the popup */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  position: relative; /* Relative positioning for child elements */
+}
+
+.cross {
+  position: absolute; /* Positioning the close icon */
+  top: 10px; /* Space from the top */
+  right: 10px; /* Space from the right */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 20px; /* Size of the close icon */
+}
+.cross:hover {
+  color: red;
+}
+
+.popup_input_holder {
+  display: flex; /* Align input and button in a row */
+  margin-top: 20px; /* Space above the input holder */
+}
+
+.popup_input_holder input {
+  flex: 1; /* Input takes remaining space */
+  padding: 10px; /* Padding inside the input */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  margin-right: 10px; /* Space between input and button */
+}
